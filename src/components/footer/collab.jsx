@@ -9,6 +9,6 @@ function Collab () {
            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=sdennisrussell@gmail.com&su=Hello&shva=1" target="_blank" rel="noopener noreferrer"><i className="fa fa-envelope m-4" aria-hidden="true"></i> </a>
            </span> 
         </div>
-    )
+    ) 
 }
 export default Collab
