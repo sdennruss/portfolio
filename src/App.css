@@ -1,85 +1,125 @@
-
-.container-1 {
-    display: flex;
-    justify-content: space-evenly;
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
 }
 
-.container-2{
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  --dominant-color: #4a6657;
+  --secondary-color: #454436;
+  --background-color: white;
+  --accent-color-1: #849666;
+  --accent-color-2: #000;
+  --accent-color-3: #ad0017;
+}
+
+.hamburger-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.line {
+  width: 4rem;
+  height: 0.2rem;
+  background: #000;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.1rem #454436;
+  transition: all 0.5s ease-in-out;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 0.2rem;
+  background: #000;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.1rem #454436;
+  transition: all 0.5s ease-in-out;
+}
+
+.line::before {
+  transform: translateY(-16px);
+}
+
+.line::after {
+  transform: translateY(16px);
+}
+
+/* Animation */
+.open .line {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+/* .open {
+  margin: 0.5rem 3rem 0 3rem;
+} */
+
+.open .line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open .line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+
+.shanice-logo,
+.navigation-container {
+  flex: 1;
   display: flex;
 }
 
-.container-3{
+.navigation-container {
+  justify-content: flex-end;
+}
+
+.about-container {
   display: flex;
-  flex-direction: column;
+  background: whi;
 }
-.container-4{
+
+.menu-container .navigation {
   display: flex;
-  flex-direction: column;
 }
 
-.container-1 div{
-background-color: #DAF7A6;
-margin: 3px;
-padding: 10px;
-}
-
-.container-2 div {
-  background-color: #A6F7C3;
-  margin: 3px;
-  height: 645px;
-}
-
-.container-3 div {
-  background-color: #A6B1F7;
-  margin: 3px;
-  height: 400px;
-}
-
-.container-4 div{
-  background-color: #A6DAF7;
-  margin:3px; 
-  height: 200px;
-}
-.list-items{
+.navigation-list {
   list-style: none;
-}
-
-ul{
-  padding:0;
-}
-
-.about{
-  order: 1;
   flex: 1;
 }
 
-.projects{
-  order:2;
+.navigation-items {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.collaborate{
-  order:3;
-  flex: 1
-}
-
-.shanice{
-  order: 1;
-  flex: 1;
-}
-
-.project-1{
-order:1;
-padding: 10px; 
-}
-
-.project-2{
-  order:2;
-  text-align: right;
-  padding: 10px
-}
-
-.project-3{
-  order:3;
-  padding: 10px;
+.navigation-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 5rem;
 }

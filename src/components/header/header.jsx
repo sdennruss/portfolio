@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Nav from "./nav";
+import Hamburger from "./hamburger";
 
+const Header = () => {
+  const navigations = ["Home", "About", "Projects", "Contact"];
+  return (
+    <React.Fragment>
+      <div className="header-container">
+        <div className="shanice-logo">
+          <h1>ShaniceDR</h1>
+        </div>
+        <div className="navigation-container">
+          <Hamburger />{" "}
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-class Header extends Component {
-    state= {
-        navigations: ["about", "projects", "collaborate"]
-    }
-
-    render() { 
-        const{navigations}=this.state
-        
-        return ( 
-        <React.Fragment>
-        {navigations.map(navigation => (
-            <div key={navigation} className={navigation}>
-                <nav className="navigation">
-                    <ul key={navigation}>
-                        <li className="list-items"><a href={"#" + navigation}>{navigation}</a></li>
-                    </ul>
-                </nav>
-            </div>
-        ))}
-        </React.Fragment>
-         );
-    }
-}
- 
 export default Header;
