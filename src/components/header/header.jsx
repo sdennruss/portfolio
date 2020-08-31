@@ -9,7 +9,7 @@ const Header = () => {
     <React.Fragment>
       <div className="header-container">
         <div className="shanice-logo">
-          <h1>ShaniceDR</h1>
+          <h1 className="my-name">Shanice DR</h1>
         </div>
         <div className="navigation-container">
           <Hamburger />{" "}

@@ -22,7 +22,6 @@ class App extends Component {
     return (
       <div className="routing-container">
         <Header />
-        <Nav />
         <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />

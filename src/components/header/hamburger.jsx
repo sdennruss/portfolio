@@ -16,7 +16,7 @@ const Hamburger = () => {
       <div className={open}>
         <div onClick={() => handleToggle(!expand)} className="line"></div>
       </div>
-      {expand && <Nav />}
+      {expand && <Nav handleToggle={handleToggle} expand={expand} />}
     </React.Fragment>
   );
 };
