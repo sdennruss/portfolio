@@ -295,6 +295,197 @@ body {
   line-height: 5rem;
   width: 70%;
 }
+
+/* projects */
+
+.projects-main {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Playfair Display SC";
+  font-size: 18rem;
+  color: var(--secondary-color);
+}
+
+.project-block {
+  width: 40%;
+  height: 10rem;
+  background-color: var(--dominant-color);
+  opacity: 20%;
+  bottom: 2rem;
+  z-index: -2;
+  left: 0rem;
+  position: absolute;
+}
+
+.project-container {
+  display: flex;
+}
+
+.project-container-left,
+.project-container-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container-left {
+  justify-content: center;
+}
+
+/* card */
+
+.card-container-01,
+.card-container-02,
+.card-container-03 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-container-02,
+.card-container-03 {
+  align-items: center;
+}
+
+.card-iamge-div-01,
+.card-image-div-o2,
+.card-image-div-03 {
+  flex: 1;
+}
+
+.card-image-div-02,
+.card-image-div-03 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image-01,
+.card-image-02,
+.card-image-03 {
+  max-width: 50vw;
+}
+
+.card-image-01 {
+  width: 100%;
+}
+
+.card-image-02,
+.card-image-03 {
+  width: 50%;
+}
+
+.card-details-01 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.card-details-02,
+.card-details-03 {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.card-title-01,
+.card-title-02,
+.card-title-03 {
+  flex: 1;
+  font-size: 3rem;
+  font-family: "Playfair Display SC";
+}
+
+.card-toggle-01,
+.card-toggle-02,
+.card-toggle-03 {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* toggle */
+.project-details-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.project-details {
+  display: flex;
+  position: relative;
+  flex-direction: inherit;
+  padding: 0 1rem;
+  width: 30vw;
+  flex: 1;
+  background-color: var(--dominant-color);
+}
+
+.p-bottom {
+  flex: 1;
+}
+
+.p-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bolder;
+  flex: 2;
+  font-size: 3rem;
+}
+.p-top {
+  flex: 4;
+}
+
+.p-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-description,
+.p-tech-used,
+.descrip,
+.tech {
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tech,
+.descrip {
+  font-weight: bold;
+}
+
+.p-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.p-number,
+.p-next {
+  flex: 1;
+}
+
+.p-number {
+  font-size: 8rem;
+  position: relative;
+}
+
+.p-next {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+  position: relative;
+}
+
 /* contact */
 
 .contact-container {

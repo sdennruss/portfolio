@@ -1,22 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from "react";
 
-class Toggle extends Component {
-    state = { 
-        expand: false
-     }
+const Toggle = ({ title, description, techUsed, number }) => {
+  const [expand, setExpand] = useState(false);
 
-    handleToggle = () =>{
-        this.setState (state =>({
-            expand: !state.expand
-        }))
-    }
-    render() { 
-        return ( 
-            <React.Fragment>
-                <button onClick={this.handleToggle}>Details</button>
-                {this.state.expand && <span><p>{this.props.description}</p><p>{this.props.techUsed}</p></span>}
-            </React.Fragment>
-         );
-    } 
-}
+  const handleToggle = (expand) => {
+    setExpand(expand);
+  };
+  return (
+    <React.Fragment>
+      <div className="button-container">
+        <button
+          className="project-button"
+          onClick={() => handleToggle(!expand)}
+        >
+          Details
+        </button>
+
+        {expand && (
+          <div className="project-details-container">
+            <div className="project-details">
+              <p className="p-title">{title}</p>
+              <div className="p-top">
+                <p className="p-description">
+                  <span className="descrip">Description: </span>
+                  {description}
+                </p>
+                <p className="p-tech-used">
+                  <span className="tech">Tech Used: </span>
+                  {techUsed}
+                </p>
+              </div>
+
+              <div className="p-bottom">
+                <div className="p-number">
+                  <p>{number}</p>
+                </div>
+                <div className="p-next">
+                  <i className="fa fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </React.Fragment>
+  );
+};
+
 export default Toggle;
