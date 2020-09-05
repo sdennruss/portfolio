@@ -8,13 +8,10 @@ const Toggle = ({ title, description, techUsed, number }) => {
   };
   return (
     <React.Fragment>
-      <div className="button-container">
-        <button
-          className="project-button"
-          onClick={() => handleToggle(!expand)}
-        >
-          Details
-        </button>
+      <div className={`button-container-${number}`}>
+        <p className="project-button" onClick={() => handleToggle(!expand)}>
+          View Details
+        </p>
 
         {expand && (
           <div className="project-details-container">

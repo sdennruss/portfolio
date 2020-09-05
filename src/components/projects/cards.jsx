@@ -1,26 +1,20 @@
 import React from "react";
-import Toggle from "./toggle";
 
-function Card({ title, number, path, description, techUsed, img }) {
+function Card({ title, number, img, img2, img3 }) {
   return (
     <React.Fragment>
       <div className={`card-container-${number}`}>
-        <div className={`card-image-div-${number}`}>
+        <div className={`card-image-left`}>
           <img className={`card-image-${number}`} src={img} />
         </div>
 
-        <div className={`card-details-${number}`}>
-          <h5 className={`card-title-${number}`}>{title}</h5>
-          <div className={`card-toggle-${number}`}>
-            <Toggle
-              title={title}
-              description={description}
-              techUsed={techUsed}
-              number={number}
-              path={path}
-              img={img}
-            />
-          </div>
+        <div className="card-image-right">
+          <img className={`card-image-right-${number}`} src={img2} />
+          <img className={`card-image-right-${number}`} src={img3} />
+        </div>
+
+        <div className="page-number">
+          <p className="footer-number">{number}</p>
         </div>
       </div>
     </React.Fragment>
