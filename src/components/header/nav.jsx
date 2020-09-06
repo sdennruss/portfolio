@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Nav = ({ expand, handleToggle }) => {
+const Nav = ({ expand, handleToggle, left }) => {
   const navigations = ["Home", "About", "Projects", "Contact"];
   const toggleNavigation = expand ? "toggle-navigation" : "navigation";
   const toggleMenu = expand ? "toggle-container" : "menu-container";
@@ -9,7 +9,7 @@ const Nav = ({ expand, handleToggle }) => {
 
   return (
     <React.Fragment>
-      <div className={toggleMenu}>
+      <div style={{ right: `${left}%` }} className={toggleMenu}>
         <nav className={toggleNavigation}>
           {navigations.map((navigation) => (
             <ul className="navigation-list">

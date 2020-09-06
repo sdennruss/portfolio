@@ -4,7 +4,6 @@ import Nav from "./nav";
 import Hamburger from "./hamburger";
 
 const Header = () => {
-  const navigations = ["Home", "About", "Projects", "Contact"];
   return (
     <React.Fragment>
       <div className="header-container">

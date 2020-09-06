@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ title, number, img, img2, img3 }) {
+function Card({ title, number, img, img2, img3, newCard, handleCardChange }) {
   return (
     <React.Fragment>
       <div className={`card-container-${number}`}>
@@ -15,6 +15,13 @@ function Card({ title, number, img, img2, img3 }) {
 
         <div className="page-number">
           <p className="footer-number">{number}</p>
+          <p className="next-button">
+            {" "}
+            <i
+              onClick={() => handleCardChange(newCard + 1)}
+              className="fa fa-chevron-right"
+            ></i>
+          </p>
         </div>
       </div>
     </React.Fragment>

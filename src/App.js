@@ -20,13 +20,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="routing-container">
+      <React.Fragment>
         <Header />
-        <Route path="/home" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
-      </div>
+
+        <div className="routing-container">
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+            <Route paht="/" exact component={Home} />
+          </Switch>
+        </div>
+      </React.Fragment>
     );
   }
 }

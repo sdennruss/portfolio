@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import projects from "./projectscope";
 import Card from "./cards";
 import Details from "./details";
 
 const Projects = (props) => {
+  const [newCard, setNewCard] = useState(0);
+
+  const handleCardChange = (card) => {
+    card === 3 ? setNewCard(0) : setNewCard(card);
+    console.log("newcard", card);
+  };
+
   return (
     //   <p className="projects-main">
     //   Projects <span className="project-block"></span>
@@ -12,28 +19,30 @@ const Projects = (props) => {
       <div className="project-container">
         <div className="project-left">
           <Details
-            title={projects[0].title}
-            description={projects[0].description}
-            techUsed={projects[0].techUsed}
-            number={projects[0].number}
-            path={projects[0].path}
-            img={projects[0].img1}
-            img2={projects[0].img2}
-            img3={projects[0].img3}
-            sub={projects[0].sub}
+            title={projects[newCard].title}
+            description={projects[newCard].description}
+            techUsed={projects[newCard].techUsed}
+            number={projects[newCard].number}
+            path={projects[newCard].path}
+            img={projects[newCard].img1}
+            img2={projects[newCard].img2}
+            img3={projects[newCard].img3}
+            sub={projects[newCard].sub}
           />
         </div>
 
         <div className="project-right">
           <Card
-            title={projects[0].title}
-            description={projects[0].description}
-            techUsed={projects[0].techUsed}
-            number={projects[0].number}
-            path={projects[0].path}
-            img={projects[0].img1}
-            img2={projects[0].img2}
-            img3={projects[0].img3}
+            title={projects[newCard].title}
+            description={projects[newCard].description}
+            techUsed={projects[newCard].techUsed}
+            number={projects[newCard].number}
+            path={projects[newCard].path}
+            img={projects[newCard].img1}
+            img2={projects[newCard].img2}
+            img3={projects[newCard].img3}
+            handleCardChange={handleCardChange}
+            newCard={newCard}
           />
         </div>
       </div>

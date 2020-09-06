@@ -1,22 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Shan from "./photoshoot.jpg";
 import Nav from "../header/nav";
 
 const Home = () => {
+  const [left, setLeft] = useState(0);
+
+  const handleLeft = (scroll) => {
+    scroll === 150 ? setLeft(0) : setLeft(scroll);
+    console.log("left", scroll);
+  };
+
+  const handleRight = (scroll) => {
+    scroll === -100 ? setLeft(100) : setLeft(scroll);
+    console.log("right", scroll);
+  };
   return (
     <React.Fragment>
       <div className="home-container">
         <div className="navigation-inner">
           <div className="left-arrow-scroll">
             {" "}
-            <i className="fa fa-chevron-left"></i>
+            <i
+              onClick={() => handleLeft(left + 50)}
+              className="fa fa-chevron-left"
+            ></i>
           </div>
           <div className="scroll-navigation">
             {" "}
-            <Nav />
+            <Nav left={left} />
           </div>
           <div className="right-arrow-scroll">
-            <i className="fa fa-chevron-right"></i>
+            <i
+              onClick={() => handleRight(left - 50)}
+              className="fa fa-chevron-right"
+            ></i>
           </div>
         </div>
 

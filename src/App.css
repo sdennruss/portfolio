@@ -121,7 +121,12 @@ body {
 .navigation {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 100%;
+}
+
+.menu-container {
+  width: 200%;
 }
 
 .toggle-container {
@@ -172,6 +177,10 @@ body {
   font-size: 10rem;
 }
 
+.navigation-link:hover {
+  border-bottom: 0.1rem solid black;
+}
+
 .toggle-links {
   text-decoration: none;
   color: var(--secondary-color);
@@ -206,10 +215,12 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .scroll-navigation {
   flex: 5;
+  overflow: hidden;
 }
 
 .image-container {
@@ -386,15 +397,29 @@ body {
 
 .page-number {
   display: flex;
+  flex: 1;
+  flex-direction: column;
   position: relative;
   align-items: center;
 }
 
 .footer-number {
+  flex: 1;
   font-size: 20rem;
   border-bottom: 0.1rem solid black;
   color: var(--dominant-color);
   /* position: absolute; */
+}
+
+.next-button {
+  font-size: 4rem;
+  padding-top: 2rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.next-button:hover {
+  color: var(--secondary-color);
 }
 
 /* Details */
