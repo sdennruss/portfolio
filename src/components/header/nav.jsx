@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Nav = ({ expand, handleToggle, left }) => {
+const Nav = ({ expand, handleToggle, left, close }) => {
   const navigations = ["Home", "About", "Projects", "Contact"];
   const toggleNavigation = expand ? "toggle-navigation" : "navigation";
   const toggleMenu = expand ? "toggle-container" : "menu-container";

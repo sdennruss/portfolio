@@ -32,6 +32,18 @@ body {
   display: flex;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 5;
+}
+
+.closed-container {
+  background: var(--secondary-color);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  animation: close 800ms ease forwards;
+  z-index: 4;
 }
 
 .line {
@@ -61,6 +73,14 @@ body {
 
 .line::after {
   transform: translateY(16px);
+}
+
+.hamburger-container:hover .line::before {
+  bottom: 0.1rem;
+}
+
+.hamburger-container:hover .line::after {
+  bottom: -0.1rem;
 }
 
 /* Animation */
@@ -111,6 +131,10 @@ body {
   font-size: 3rem;
 }
 
+.not-open {
+  display: none;
+}
+
 .navigation-container {
   display: flex;
   justify-content: flex-end;
@@ -158,6 +182,24 @@ body {
   }
 }
 
+@keyframes close {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes Up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .navigation-list {
   list-style: none;
   display: flex;
@@ -197,6 +239,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 89.5vh;
+  animation: Up 1000ms ease forwards;
 }
 
 .navigation-inner {
@@ -322,7 +365,7 @@ body {
   color: var(--secondary-color);
   margin: 2rem;
 }
-
+ 
 .project-block {
   width: 40%;
   height: 10rem;
@@ -625,4 +668,32 @@ body {
   font-size: 3rem;
   text-align: justify;
   z-index: -2;
+}
+
+/* svg */
+#at-sign {
+  animation: ball 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#foot {
+  animation: leg 1s ease-in-out infinite;
+}
+
+@keyframes ball {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes leg {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
 }

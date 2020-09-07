@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as Girl } from "./contact-girl.svg";
 
 const Contact = () => {
   return (
@@ -10,7 +11,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="crackin">
-          <p className="second-line">Crackin'</p>
+          <p className="second-line">The Ball Rolling</p>
         </div>
         <div className="contact-details">
           <p className="contact-paragraph">
@@ -19,6 +20,7 @@ const Contact = () => {
             is working with <span className="ethical"></span> ethic brands tht
             does not decieve customers with the productsand service you offer.
           </p>
+          <Girl />
         </div>
       </div>
     </React.Fragment>

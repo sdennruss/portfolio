@@ -6,12 +6,13 @@ const Home = () => {
   const [left, setLeft] = useState(0);
 
   const handleLeft = (scroll) => {
-    scroll === 150 ? setLeft(0) : setLeft(scroll);
+    scroll === -100 ? setLeft(100) : setLeft(scroll);
+
     console.log("left", scroll);
   };
 
   const handleRight = (scroll) => {
-    scroll === -100 ? setLeft(100) : setLeft(scroll);
+    scroll === 150 ? setLeft(0) : setLeft(scroll);
     console.log("right", scroll);
   };
   return (
@@ -21,7 +22,7 @@ const Home = () => {
           <div className="left-arrow-scroll">
             {" "}
             <i
-              onClick={() => handleLeft(left + 50)}
+              onClick={() => handleLeft(left - 50)}
               className="fa fa-chevron-left"
             ></i>
           </div>
@@ -31,7 +32,7 @@ const Home = () => {
           </div>
           <div className="right-arrow-scroll">
             <i
-              onClick={() => handleRight(left - 50)}
+              onClick={() => handleRight(left + 50)}
               className="fa fa-chevron-right"
             ></i>
           </div>
