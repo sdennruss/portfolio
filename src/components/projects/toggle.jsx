@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 
 const Toggle = ({ title, description, techUsed, number }) => {
   const [expand, setExpand] = useState(false);

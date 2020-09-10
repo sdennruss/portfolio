@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = ({ expand, handleToggle, left, close }) => {
@@ -12,14 +12,14 @@ const Nav = ({ expand, handleToggle, left, close }) => {
       <div style={{ right: `${left}%` }} className={toggleMenu}>
         <nav className={toggleNavigation}>
           {navigations.map((navigation) => (
-            <ul className="navigation-list">
+            <ul key={navigation} className="navigation-list">
               <li className="navigation-items">
                 <Link
                   onClick={() => handleToggle(!expand)}
                   className={toggleLinks}
                   to={`/${navigation}`}
                 >
-                  {navigation}
+                  <span className="span-hover">{navigation} </span>
                 </Link>
               </li>
             </ul>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
 
 * {
   padding: 0;
@@ -113,7 +114,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  height: 10vh;
 }
 
 .shanice-logo,
@@ -127,7 +128,7 @@ body {
 }
 
 .my-name {
-  font-family: "Bad Script";
+  font-family: "El+Messiri";
   font-size: 3rem;
 }
 
@@ -214,23 +215,143 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   text-decoration: none;
   color: var(--secondary-color);
-  font-size: 10rem;
+  font-size: 15rem;
+  letter-spacing: 0.8rem;
 }
-
-.navigation-link:hover {
-  border-bottom: 0.1rem solid black;
-}
-
 .toggle-links {
   text-decoration: none;
   color: var(--secondary-color);
-  font-size: 10rem;
+  font-size: 15rem;
+  letter-spacing: 0.8rem;
 }
 
-.toggle-links:hover {
-  color: white;
+.span-hover {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.span-hover::before,
+.span-hover::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+.span-hover::before {
+  left: -2.5px;
+}
+
+/* nav link */
+.navigation-link .span-hover::after {
+  right: 2.5px;
+  background: black;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navigation-link .span-hover:hover::before {
+  background: black;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navigation-link .span-hover:hover::after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/* toggle link */
+.toggle-links .span-hover::after {
+  right: 2.5px;
+  background: white;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.toggle-links .span-hover:hover::before {
+  background: white;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.toggle-links .span-hover:hover::after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100vh;
+}
+
+.left {
+  position: absolute;
+  top: 0px;
+  background-color: black;
+  float: left;
+  z-index: 5;
+}
+
+.right {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background-color: black;
+  float: right;
+  box-sizing: border-box;
+  border-left: 1px solid #362d2c;
+  z-index: 5;
+}
+
+.animated {
+  animation-delay: 1000ms;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  -o-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.animated-left {
+  animation-name: toZeroLeft;
+}
+
+.animated-right {
+  animation-name: toZeroRight;
+}
+
+@keyframes toZeroLeft {
+  from {
+    right: 50%;
+    width: 50%;
+  }
+
+  to {
+    right: 100%;
+    width: 0;
+  }
+}
+
+@keyframes toZeroRight {
+  from {
+    left: 50%;
+    width: 50%;
+  }
+
+  to {
+    left: 100%;
+    width: 0;
+  }
 }
 
 .home-container {
@@ -238,8 +359,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 89.5vh;
-  animation: Up 1000ms ease forwards;
+  height: 80vh;
+  animation: Up 2200ms ease-out forwards;
 }
 
 .navigation-inner {
@@ -255,10 +376,21 @@ body {
 .right-arrow-scroll {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2rem;
   cursor: pointer;
+}
+
+.left-arrow-scroll {
+  justify-content: flex-end;
+}
+
+.right-arrow-scroll {
+  justify-content: flex-start;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 10%;
 }
 
 .scroll-navigation {
@@ -275,7 +407,7 @@ body {
 
 .square-background {
   position: relative;
-  right: 12%;
+  right: 13%;
   bottom: 5%;
   width: 30rem;
   height: 56rem;
@@ -302,13 +434,13 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-  height: 89.5vh;
+  height: 80vh;
 }
 
 .laughing-shan {
   position: relative;
   left: 2rem;
-  height: 89.5vh;
+  height: 80vh;
 }
 
 .about-details {
@@ -696,4 +828,49 @@ body {
   to {
     transform: rotateX(10deg);
   }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  height: 10vh;
+}
+
+.email-div,
+.github-div {
+  flex: 1;
+  display: flex;
+  position: relative;
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+}
+
+.github-div {
+  justify-content: flex-end;
+  right: 2rem;
+}
+
+.email-div {
+  justify-content: flex-start;
+  left: 2rem;
+}
+
+.email-shan {
+  text-decoration: none;
+}
+
+.fa.fa-github.m-4,
+.say-hello {
+  display: flex;
+  flex: 1;
+  position: relative;
+  color: black;
+}
+
+.fa.fa-github.m-4:hover::before,
+.say-hello:hover {
+  color: var(--dominant-color);
+  font-weight: bolder;
 }

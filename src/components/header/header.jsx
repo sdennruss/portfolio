@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Nav from "./nav";
 import Hamburger from "./hamburger";
 
 const Header = () => {
@@ -19,7 +17,7 @@ const Header = () => {
     <React.Fragment>
       <div className="header-container">
         <div className="shanice-logo">
-          <h1 className="my-name">Shanice DR</h1>
+          <h1 className="my-name">Shanice D.R</h1>
         </div>
         <div className="navigation-container">
           <Hamburger
