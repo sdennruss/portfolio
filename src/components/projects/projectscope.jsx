@@ -2,7 +2,7 @@ import Cow1 from "./project-assets/cow1.png";
 import Cow2 from "./project-assets/cow2.png";
 import Cow3 from "./project-assets/cow3.png";
 import MensWear from "./project-assets/mens-wear.jpg";
-import PinkScooter from "./project-assets/pink-scooter.jpg";
+import PinkScooter from "./project-assets/scooter-mock.png";
 
 export const projects = [
   {
@@ -18,7 +18,9 @@ export const projects = [
     number: "01",
   },
   {
-    img: PinkScooter,
+    img1: PinkScooter,
+    img2: "",
+    img3: "",
     title: "Scoot Scoot",
     sub: "Instaworthy Drives",
     description:
@@ -28,7 +30,9 @@ export const projects = [
     number: "02",
   },
   {
-    img: MensWear,
+    img1: Cow1,
+    img2: Cow2,
+    img3: Cow3,
     title: "Hercules",
     sub: "Make it Street",
     description:

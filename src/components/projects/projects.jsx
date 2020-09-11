@@ -5,20 +5,28 @@ import Details from "./details";
 
 const Projects = (props) => {
   const [newCard, setNewCard] = useState(0);
+  const [expand, setExpand] = useState(false);
 
   const handleCardChange = (card) => {
     card === 3 ? setNewCard(0) : setNewCard(card);
     console.log("newcard", card);
   };
 
+  const handleToggle = (expand) => {
+    setExpand(expand);
+  };
+
+  const blurContainer = expand ? "blur" : "not-blured";
+
   return (
-    //   <p className="projects-main">
-    //   Projects <span className="project-block"></span>
-    // </p>
     <React.Fragment>
+      <div className="project-trans"></div>
       <div className="project-container">
         <div className="project-left">
           <Details
+            expand={expand}
+            newCard={newCard}
+            blurContainer={blurContainer}
             title={projects[newCard].title}
             description={projects[newCard].description}
             techUsed={projects[newCard].techUsed}
@@ -28,11 +36,15 @@ const Projects = (props) => {
             img2={projects[newCard].img2}
             img3={projects[newCard].img3}
             sub={projects[newCard].sub}
+            handleToggle={handleToggle}
+            handleCardChange={handleCardChange}
           />
         </div>
 
         <div className="project-right">
           <Card
+            expand={expand}
+            blurContainer={blurContainer}
             title={projects[newCard].title}
             description={projects[newCard].description}
             techUsed={projects[newCard].techUsed}
@@ -42,6 +54,7 @@ const Projects = (props) => {
             img2={projects[newCard].img2}
             img3={projects[newCard].img3}
             handleCardChange={handleCardChange}
+            handleToggle={handleToggle}
             newCard={newCard}
           />
         </div>

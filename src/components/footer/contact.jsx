@@ -4,6 +4,7 @@ import { ReactComponent as Girl } from "./contact-girl.svg";
 const Contact = () => {
   return (
     <React.Fragment>
+      <div className="contact-trans"> </div>
       <div className="contact-container">
         <div className="lets-get-">
           <p className="first-line">

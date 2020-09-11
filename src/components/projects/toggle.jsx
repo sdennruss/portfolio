@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Toggle = ({ title, description, techUsed, number }) => {
-  const [expand, setExpand] = useState(false);
-
-  const handleToggle = (expand) => {
-    setExpand(expand);
-  };
+const Toggle = ({
+  title,
+  description,
+  techUsed,
+  number,
+  expand,
+  handleToggle,
+  handleCardChange,
+  newCard,
+}) => {
   return (
     <React.Fragment>
       <div className={`button-container-${number}`}>
@@ -15,7 +19,12 @@ const Toggle = ({ title, description, techUsed, number }) => {
 
         {expand && (
           <div className="project-details-container">
-            <div className="project-details">
+            <div className={`project-details-${number}`}>
+              <div className="exit-button">
+                <p onClick={() => handleToggle(!expand)} className="exit-x">
+                  X
+                </p>
+              </div>
               <p className="p-title">{title}</p>
               <div className="p-top">
                 <p className="p-description">
@@ -33,7 +42,10 @@ const Toggle = ({ title, description, techUsed, number }) => {
                   <p>{number}</p>
                 </div>
                 <div className="p-next">
-                  <i className="fa fa-chevron-right"></i>
+                  <i
+                    onClick={() => handleCardChange(newCard + 1)}
+                    className="fa fa-chevron-right"
+                  ></i>
                 </div>
               </div>
             </div>

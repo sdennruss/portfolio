@@ -1,9 +1,20 @@
 import React from "react";
 
-function Card({ title, number, img, img2, img3, newCard, handleCardChange }) {
+function Card({
+  title,
+  number,
+  img,
+  img2,
+  img3,
+  newCard,
+  expand,
+  handleCardChange,
+  handleToggle,
+}) {
+  const blur = expand ? "blur-2" : "card-container";
   return (
     <React.Fragment>
-      <div className={`card-container-${number}`}>
+      <div className={blur}>
         <div className={`card-image-left`}>
           <img className={`card-image-${number}`} src={img} />
         </div>
@@ -14,7 +25,7 @@ function Card({ title, number, img, img2, img3, newCard, handleCardChange }) {
         </div>
 
         <div className="page-number">
-          <p className="footer-number">{number}</p>
+          <p className={`footer-number-${number}`}>{number}</p>
           <p className="next-button">
             {" "}
             <i
