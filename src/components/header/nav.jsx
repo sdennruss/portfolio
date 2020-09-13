@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = ({ expand, handleToggle, left, close }) => {
-  const navigations = ["Home", "About", "Projects", "Contact"];
+  const navigations = ["Home", "Projects", "Contact"];
   const toggleNavigation = expand ? "toggle-navigation" : "navigation";
   const toggleMenu = expand ? "toggle-container" : "menu-container";
   const toggleLinks = expand ? "toggle-links" : "navigation-link";

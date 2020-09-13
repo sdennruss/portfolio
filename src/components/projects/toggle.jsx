@@ -22,7 +22,7 @@ const Toggle = ({
             <div className={`project-details-${number}`}>
               <div className="exit-button">
                 <p onClick={() => handleToggle(!expand)} className="exit-x">
-                  X
+                  close
                 </p>
               </div>
               <p className="p-title">{title}</p>

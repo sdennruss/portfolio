@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 
 * {
   padding: 0;
@@ -162,7 +166,7 @@ body {
 }
 
 .menu-container {
-  width: 200%;
+  width: 155%;
 }
 
 .toggle-container {
@@ -237,14 +241,18 @@ body {
 .navigation-link {
   position: relative;
   text-decoration: none;
+  font-family: "Playfair Display SC";
+  font-weight: bold;
   color: var(--secondary-color);
-  font-size: 15rem;
+  font-size: 10rem;
   letter-spacing: 0.8rem;
 }
+
 .toggle-links {
   text-decoration: none;
   color: var(--secondary-color);
   font-size: 15rem;
+  font-family: "Playfair Display SC";
   letter-spacing: 0.8rem;
 }
 
@@ -437,6 +445,15 @@ body {
 
 .image-of-shan {
   position: absolute;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.image-of-shan:hover {
+  filter: grayscale(0.2);
+  transform: scale(0.9);
 }
 
 /*About */
@@ -453,92 +470,206 @@ body {
 
 .about-container {
   display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
   animation: transitionIn ease-in 800ms;
+}
+
+.about-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-name,
+.role {
+  /* text-transform: uppercase; */
+  position: relative;
+  transition: transform 0.5s ease;
+  filter: opacity(0.7);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 100%;
+  font-family: "Playfair Display SC";
+  font-size: 20rem;
+  left: 4rem;
+}
+
+.first-name {
+  color: var(--accent-color-3);
+}
+
+.about-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 .shan-image {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex: 1;
-  height: 80vh;
+  max-height: 89.5vh;
+  overflow: hidden;
+  left: 2rem;
 }
 
 .laughing-shan {
   position: relative;
-  left: 2rem;
-  height: 80vh;
+  width: 89.5vw;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.laughing-shan:hover {
+  filter: grayscale(0.3);
+  transform: scale(1.2);
 }
 
 .about-details {
   flex: 2;
-}
-
-.first-name,
-.last-name {
-  text-transform: uppercase;
-  font-family: "Playfair Display SC";
-  font-size: 18rem;
-}
-
-.first-name {
-  color: var(--secondary-color);
-  /* text-align: center; */
-}
-
-.last-name {
-  position: relative;
+  margin-right: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: var(--accent-color-1);
-  float: right;
-  width: 30%;
-}
-
-.block-shadow {
-  width: 90%;
-  height: 10rem;
-  background-color: var(--dominant-color);
-  opacity: 20%;
-  position: absolute;
-  bottom: 2rem;
-  float: right;
-  z-index: -2;
+  width: 100%;
 }
 
 .more-info {
-  font-size: 3.5rem;
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  position: relative;
+  height: 10vh;
+}
+
+.hailing {
+  width: 100%;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin: 0 2rem 1rem 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
   position: relative;
   text-align: justify;
-  line-height: 5rem;
-  width: 70%;
+  font-family: "Playfair Display";
+  text-align: center;
 }
+
+.more-info-2 {
+  font-size: 2.5rem;
+  position: relative;
+  text-align: justify;
+  line-height: 3.5rem;
+  width: 88%;
+  left: 4rem;
+  top: 3rem;
+  font-family: "Open Sans";
+}
+
+.des,
+.dev {
+  font-size: 2.3rem;
+}
+
+.des {
+  font-family: "Homemade Apple", cursive;
+  font-weight: bold;
+  position: relative;
+}
+
+.dev {
+  font-family: "Anonymous Pro", monospace;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+  width: 10%;
+  animation: typewriter 6s steps(11) infinite normal both,
+    blinkTextCursor 400ms steps(11) infinite normal;
+  display: inline-flex;
+}
+
+@keyframes typewriter {
+  10% {
+    width: 0ch;
+  }
+
+  0% {
+    width: 11ch;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: 2px solid rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.encounter,
+.striking {
+  position: relative;
+  font-size: 2.5rem;
+}
+
+.striking {
+  text-decoration: line-through;
+}
+
+/* .encounter{
+  position:relative;
+  font-size: 2.5rem;
+}
+
+.encounter .svg-circle {
+   fill: none;
+  stroke:black;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 340;
+  stroke-dashoffset: 330;
+  stroke-linecap: round;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: calc(100% + 1rem );
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+  z-index: -1;
+}
+
+
+
+
+
+.encounter--active .svg-circle{
+  stroke: #00000;
+}
+
+
+.encounter--active .svg-circle, .encounter:hover .svg-circle{
+   stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+} */
+
+/* .tell-me-more {
+  top: 50rem;
+  display: flex;
+  font-size: 8rem;
+  background-color: green;
+  width: 100rem;
+  height: 50rem;
+} */
 
 /* projects */
-
-/* .projects-main {
-  position: relative;
-  text-transform: uppercase;
-  font-family: "Playfair Display SC";
-  font-size: 18rem;
-  color: var(--secondary-color);
-  margin: 2rem;
-}
- 
-.project-block {
-  width: 40%;
-  height: 10rem;
-  background-color: var(--dominant-color);
-  opacity: 20%;
-  bottom: 2rem;
-  z-index: -2;
-  left: 0rem;
-  position: absolute;
-} */
 
 .project-container {
   display: flex;
@@ -606,11 +737,15 @@ body {
 .card-image-02,
 .card-image-03,
 .card-image-right-01,
-.card-image-right-02,
 .card-image-right-03 {
   flex: 1;
   display: flex;
   position: relative;
+}
+
+.card-image-left:hover,
+.card-image-right:hover {
+  transform: translateY(-20px);
 }
 
 .card-image-01,
@@ -620,7 +755,6 @@ body {
 }
 
 .card-image-right-01,
-.card-image-right-02,
 .card-image-right-03 {
   max-width: 80%;
 }
@@ -631,6 +765,7 @@ body {
   flex-direction: column;
   position: relative;
   align-items: center;
+  right: 2rem;
 }
 
 .footer-number-01,
@@ -743,7 +878,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 25vh;
+  justify-items: center;
+  bottom: 32vh;
   left: 25vw;
   z-index: 5;
 }
@@ -756,7 +892,7 @@ body {
   flex-direction: inherit;
   padding: 0 1rem;
   width: 30vw;
-  height: 40vh;
+  height: 44.75vh;
   flex: 1;
 }
 
@@ -858,7 +994,7 @@ body {
 
 /* contact */
 .contact-trans {
-  background: yellowgreen;
+  background: var(--accent-color-3);
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -880,68 +1016,58 @@ body {
 .contact-container {
   display: flex;
   position: relative;
-  flex-direction: column;
   height: 89.5vh;
   animation: transitionIn ease-in 800ms;
 }
 
-.first-line,
-.second-line {
-  position: relative;
-  text-transform: uppercase;
+.contact-right {
+  flex: 1;
+  display: flex;
+}
+
+.contact-header {
+  font-size: 10rem;
   font-family: "Playfair Display SC";
-  font-size: 18rem;
-  flex: 1;
-  display: flex;
-}
-
-.first-line {
-  position: relative;
-  display: flex;
-  float: right;
   color: var(--secondary-color);
-  justify-content: flex-end;
 }
 
-.block-shadow-2 {
-  width: 100%;
-  height: 10rem;
-  background-color: var(--dominant-color);
-  opacity: 20%;
+.blob {
   position: absolute;
-  bottom: 2rem;
-  float: right;
-  z-index: -2;
+  top: 0;
+  left: 0;
+  fill: var(--dominant-color);
+  width: 50vmax;
+  z-index: -1;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
 }
 
-.second-line {
-  color: var(--accent-color-1);
-  justify-content: center;
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, 30px);
+  }
+  38% {
+    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(360deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(360deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
+  }
+  /* 80% {
+    transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
+  } */
+  100% {
+    transform: scale(1) translate(10px, 30px);
+  }
 }
 
-.contact-details {
-  position: relative;
+.at-sign-girl {
   flex: 1;
   display: flex;
   justify-content: center;
-}
-
-.contact-paragraph {
-  position: relative;
-  font-size: 3rem;
-  text-align: justify;
-  width: 50%;
-}
-
-.ethical {
-  width: 15rem;
-  height: 3.5rem;
-  background-color: var(--accent-color-1);
-  opacity: 50%;
-  position: absolute;
-  font-size: 3rem;
-  text-align: justify;
-  z-index: -2;
+  align-items: center;
 }
 
 /* svg */
@@ -975,7 +1101,7 @@ body {
 .footer-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   height: 5vh;
 }
@@ -985,7 +1111,6 @@ body {
   flex: 1;
   display: flex;
   position: relative;
-  font-size: 4.5rem;
   padding-bottom: 1rem;
 }
 
@@ -1011,8 +1136,17 @@ body {
   color: black;
 }
 
+.say-hello {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 2.2rem;
+}
 .fa.fa-github.m-4:hover::before,
 .say-hello:hover {
   color: var(--dominant-color);
   font-weight: bolder;
+}
+
+.fa.fa-github.m-4 {
+  font-size: 3rem;
 }

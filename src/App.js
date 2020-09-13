@@ -4,40 +4,29 @@ import Projects from "./components/projects/projects";
 import { projects } from "./components/projects/projectscope";
 import Home from "./components/home/home";
 import { Switch, Route } from "react-router-dom";
-import Contact from "./components/footer/contact";
+import Contact from "./components/contact/contact";
 import "./App.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 
-class App extends Component {
-  state = {
-    projects: [],
-  };
+const App = () => {
+  return (
+    <React.Fragment>
+      <Header />
 
-  componentDidMount() {
-    this.setState({ projects });
-  }
+      <div className="routing-container">
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
+          <Route path="home" component={Footer} />
+          <Route paht="/" exact component={Home} />
+        </Switch>
+      </div>
 
-  render() {
-    return (
-      <React.Fragment>
-        <Header />
-
-        <div className="routing-container">
-          <Switch>
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-            <Route path="home" component={Footer} />
-            <Route paht="/" exact component={Home} />
-          </Switch>
-        </div>
-
-        <Footer />
-      </React.Fragment>
-    );
-  }
-}
+      <Footer />
+    </React.Fragment>
+  );
+};
 
 export default App;

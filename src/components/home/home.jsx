@@ -3,19 +3,20 @@ import Shan from "./photoshoot.jpg";
 import Nav from "../header/nav";
 import { ReactComponent as Left } from "./left.svg";
 import { ReactComponent as Right } from "./right.svg";
+// import { ReactComponent as Blob } from "./blob.svg";
 import LandingPage from "./landing";
 
 const Home = () => {
   const [left, setLeft] = useState(0);
 
   const handleLeft = (scroll) => {
-    scroll === -100 ? setLeft(100) : setLeft(scroll);
+    scroll === -54 ? setLeft(54) : setLeft(scroll);
 
     console.log("left", scroll);
   };
 
   const handleRight = (scroll) => {
-    scroll === 150 ? setLeft(0) : setLeft(scroll);
+    scroll === 108 ? setLeft(0) : setLeft(scroll);
     console.log("right", scroll);
   };
 
@@ -25,14 +26,14 @@ const Home = () => {
       <div className="home-container">
         <div className="navigation-inner">
           <div className="left-arrow-scroll">
-            <Left onClick={() => handleLeft(left - 50)} />
+            <Left onClick={() => handleLeft(left - 54)} />
           </div>
           <div className="scroll-navigation">
             {" "}
             <Nav left={left} />
           </div>
           <div className="right-arrow-scroll">
-            <Right onClick={() => handleRight(left + 50)} />
+            <Right onClick={() => handleRight(left + 54)} />
           </div>
         </div>
 
@@ -45,6 +46,16 @@ const Home = () => {
             alt="sdr"
           />
         </div>
+      </div>
+      <div className="more-info">
+        <p className="hailing">
+          Web Developer hailing from Toronto, Canada, currently hibernating in
+          Asia <p className="dev"> {` < /developing >`}</p> and{" "}
+          <span className="des">designing </span> minimalistic websites to
+          transition businesses from the offline world and introduce their
+          brands on the <span className="striking"> World Wide Web.</span> (Need
+          to polish copy)
+        </p>
       </div>
     </React.Fragment>
   );

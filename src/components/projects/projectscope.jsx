@@ -19,8 +19,6 @@ export const projects = [
   },
   {
     img1: PinkScooter,
-    img2: "",
-    img3: "",
     title: "Scoot Scoot",
     sub: "Instaworthy Drives",
     description:

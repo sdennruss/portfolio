@@ -1,30 +1,66 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Laughing from "./laughing-shan.jpeg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-const About = () => {
+const About = ({ showBanner }) => {
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   return (
     <React.Fragment>
       <div className="about-trans"> </div>
       <div className="about-container">
-        <div className="shan-image">
-          <img
-            className="laughing-shan"
-            src={Laughing}
-            alt="Photo of Shanice"
-          />
+        <div className="about-top">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            className="who-is-she"
+          >
+            <p className="first-name">Shanice</p>
+          </div>
         </div>
-        <div className="about-details">
-          <p className="first-name">Shanice </p>
 
-          <p className="last-name">
-            DR. <span className="block-shadow"></span>
-          </p>
-          <p className="more-info">
-            Front-end developer hailing from the ice-cold winters of Toronto,
-            Canada with a marketing background from my time working in the auto
-            and sports & entertainment industry. Made a career switch afte
-            recognizing my desires to c x x and x Breiflydiscuss service offered
-          </p>
+        <div className="about-bottom">
+          <div className="shan-image">
+            <img
+              className="laughing-shan"
+              src={Laughing}
+              alt="Photo of Shanice"
+            />
+          </div>
+
+          <div className="about-details">
+            <p data-aos="fade-up" data-aos-duration="2000" className="role">
+              Web Developer
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="more-info"
+            >
+              Web Developer hailing from Toronto, Canada, currently hibernating
+              in Asia <p className="dev"> {` < /developing >`}</p> and{" "}
+              <span className="des">designing </span> minimalistic websites for
+              those looking to transition their business off the ground and
+              integrate on the{" "}
+              <span className="striking"> World Wide Web.</span>{" "}
+            </p>
+
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1800"
+              className="more-info-2"
+            >
+              Quick walk on memory lane. Remember those early 2000s platforms
+              the emergered in the early 2000s where we would create websites
+              featuring photos of celebs, gifs, music in the backgroun, and a
+              comment sections for our friends that visited our page? Well,
+              picture me. That girl on the left of the screen, spending hours on
+              end dabbling in my first encounter in coding. Thinking I was th
+            </p>
+          </div>
         </div>
       </div>
     </React.Fragment>
