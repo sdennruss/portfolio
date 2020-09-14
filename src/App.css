@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 * {
   padding: 0;
@@ -341,7 +342,7 @@ body {
 }
 
 .animated {
-  animation-delay: 500ms;
+  animation-delay: 400ms;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
   -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -419,6 +420,16 @@ body {
 .left-arrow,
 .right-arrow {
   width: 10%;
+  height: 10%;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  width: 14%;
+}
+
+#Vector:hover {
+  fill: var(--accent-color-3);
 }
 
 .scroll-navigation {
@@ -441,6 +452,7 @@ body {
   height: 56rem;
   background-color: var(--dominant-color);
   z-index: -1;
+  box-shadow: 0.5rem 0.5rem 0.5rem #000;
 }
 
 .image-of-shan {
@@ -448,96 +460,16 @@ body {
   overflow: hidden;
   transition: transform 0.5s ease;
   cursor: pointer;
+  box-shadow: 0.3rem 0.3rem 0.3rem #000;
   z-index: 5;
 }
 
 .image-of-shan:hover {
-  filter: grayscale(0.2);
+  filter: grayscale(0.5);
   transform: scale(0.9);
 }
 
 /*About */
-.about-trans {
-  background: yellowgreen;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  animation: UpContact 800ms ease-out forwards;
-  z-index: 4;
-}
-
-.about-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  animation: transitionIn ease-in 800ms;
-}
-
-.about-top {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.first-name,
-.role {
-  /* text-transform: uppercase; */
-  position: relative;
-  transition: transform 0.5s ease;
-  filter: opacity(0.7);
-  display: flex;
-  flex: 1;
-  align-items: center;
-  min-width: 100%;
-  font-family: "Playfair Display SC";
-  font-size: 20rem;
-  left: 4rem;
-}
-
-.first-name {
-  color: var(--accent-color-3);
-}
-
-.about-bottom {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-}
-
-.shan-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  max-height: 89.5vh;
-  overflow: hidden;
-  left: 2rem;
-}
-
-.laughing-shan {
-  position: relative;
-  width: 89.5vw;
-  overflow: hidden;
-  transition: transform 0.5s ease;
-}
-
-.laughing-shan:hover {
-  filter: grayscale(0.3);
-  transform: scale(1.2);
-}
-
-.about-details {
-  flex: 2;
-  margin-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
 
 .more-info {
   display: flex;
@@ -558,17 +490,6 @@ body {
   text-align: justify;
   font-family: "Playfair Display";
   text-align: center;
-}
-
-.more-info-2 {
-  font-size: 2.5rem;
-  position: relative;
-  text-align: justify;
-  line-height: 3.5rem;
-  width: 88%;
-  left: 4rem;
-  top: 3rem;
-  font-family: "Open Sans";
 }
 
 .des,
@@ -612,7 +533,6 @@ body {
   }
 }
 
-.encounter,
 .striking {
   position: relative;
   font-size: 2.5rem;
@@ -621,53 +541,6 @@ body {
 .striking {
   text-decoration: line-through;
 }
-
-/* .encounter{
-  position:relative;
-  font-size: 2.5rem;
-}
-
-.encounter .svg-circle {
-   fill: none;
-  stroke:black;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 340;
-  stroke-dashoffset: 330;
-  stroke-linecap: round;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: calc(100% + 1rem );
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
-  z-index: -1;
-}
-
-
-
-
-
-.encounter--active .svg-circle{
-  stroke: #00000;
-}
-
-
-.encounter--active .svg-circle, .encounter:hover .svg-circle{
-   stroke-dashoffset: 0;
-  opacity: 1;
-  transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-} */
-
-/* .tell-me-more {
-  top: 50rem;
-  display: flex;
-  font-size: 8rem;
-  background-color: green;
-  width: 100rem;
-  height: 50rem;
-} */
 
 /* projects */
 
@@ -718,7 +591,7 @@ body {
 }
 
 .blur-2 {
-  filter: blur(4px);
+  filter: blur(5px);
 }
 
 .card-image-left {
@@ -804,7 +677,7 @@ body {
 }
 
 .blur {
-  filter: blur(4px);
+  filter: blur(5px);
   cursor: pointer;
 }
 
@@ -1018,17 +891,22 @@ body {
   position: relative;
   height: 89.5vh;
   animation: transitionIn ease-in 800ms;
+  margin: 0 2rem;
 }
 
-.contact-right {
+.contact-left {
   flex: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-header {
   font-size: 10rem;
+  width: 70%;
   font-family: "Playfair Display SC";
-  color: var(--secondary-color);
+  text-align: center;
+  color: var(--background-color);
 }
 
 .blob {
@@ -1047,27 +925,55 @@ body {
     transform: scale(1) translate(10px, 30px);
   }
   38% {
-    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(360deg);
+    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(160deg);
   }
   40% {
-    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(360deg);
+    transform: scale(0.8, 1) translate(0vw, 30vh) rotate(160deg);
   }
   78% {
     transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
   }
-  /* 80% {
+  80% {
     transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
-  } */
+  }
   100% {
     transform: scale(1) translate(10px, 30px);
   }
 }
 
-.at-sign-girl {
+.contact-right {
+  position: relative;
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.contact-paragraph {
+  font-size: 3rem;
+  position: relative;
+  display: flex;
+  font-family: "Playfair Display";
+  border-bottom: 2px solid black;
+  padding-bottom: 2rem;
+}
+
+.ethical {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  font-weight: bolder;
+  font-family: "Raleway", sans-serif;
+}
+
+.pronounciation {
+  font-size: 2rem;
+  font-style: italic;
+  font-family: "Raleway", sans-serif;
+}
+
+.definition {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
 }
 
 /* svg */

@@ -1,7 +1,5 @@
-import React, { Component } from "react";
-import About from "./components/about/about";
+import React from "react";
 import Projects from "./components/projects/projects";
-import { projects } from "./components/projects/projectscope";
 import Home from "./components/home/home";
 import { Switch, Route } from "react-router-dom";
 import Contact from "./components/contact/contact";

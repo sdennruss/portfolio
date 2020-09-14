@@ -53,9 +53,9 @@ const Projects = (props) => {
             img={projects[newCard].img1}
             img2={projects[newCard].img2}
             img3={projects[newCard].img3}
+            newCard={newCard}
             handleCardChange={handleCardChange}
             handleToggle={handleToggle}
-            newCard={newCard}
           />
         </div>
       </div>

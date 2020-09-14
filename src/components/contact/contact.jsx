@@ -8,19 +8,23 @@ const Contact = () => {
       <div className="contact-trans"> </div>
 
       <div className="contact-container">
-        <div classNa="contact-left">
+        <div className="contact-left">
+          <h1 className="contact-header">Let's Get The Ball Rollin'</h1>
           <Blob />
         </div>
 
         <div className="contact-right">
-          <h1 className="contact-header">Let's Get The Ball Rollin'</h1>
           <p className="contact-paragraph">
             {" "}
-            Shoot me an email with details of your project, time frame and/or
-            and social media platforms used to promtoe your brand. My main focus
-            is working with ethic brands tht does not decieve customers with the
-            productsand service you offer.
+            One of my goals as a Web Developer is to spend my core time focused
+            on working with as a top priority.
           </p>
+          <p className="ethical">eth·i·cal</p>
+          <p className="pronounciation">/ˈeTHək(ə)l/</p>
+          <li className="definition">
+            avoiding activities or organizations that do harm to people or the
+            environment.{" "}
+          </li>
         </div>
       </div>
     </React.Fragment>
