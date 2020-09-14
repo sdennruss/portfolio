@@ -442,13 +442,14 @@ body {
   display: flex;
   align-items: center;
   position: absolute;
+  justify-content: center;
 }
 
 .square-background {
   position: relative;
   right: 13%;
   bottom: 5%;
-  width: 30rem;
+  width: 32rem;
   height: 56rem;
   background-color: var(--dominant-color);
   z-index: -1;
@@ -462,6 +463,7 @@ body {
   cursor: pointer;
   box-shadow: 0.3rem 0.3rem 0.3rem #000;
   z-index: 5;
+  height: 500px;
 }
 
 .image-of-shan:hover {
@@ -693,7 +695,7 @@ body {
 .details-title-01,
 .details-title-02,
 .details-title-03 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
 }
@@ -701,9 +703,12 @@ body {
 .subtitle-div {
   margin-top: 2rem;
   text-align: center;
-  font-size: 10rem;
-  color: white;
+}
+
+.sub-title {
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 6rem;
+  color: white;
 }
 
 .one-letter-01,
@@ -737,13 +742,17 @@ body {
 
 .toggle-details {
   margin-top: 2rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
   z-index: 10;
 }
 .project-button {
   cursor: pointer;
-  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5rem;
   color: #fff;
+}
+
+.project-button:hover {
+  font-weight: bold;
 }
 
 .project-details-container {
@@ -1055,4 +1064,189 @@ body {
 
 .fa.fa-github.m-4 {
   font-size: 3rem;
+}
+
+/* mobile responsiveness */
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 8vh;
+  }
+
+  .toggle-links {
+    font-size: 8rem;
+  }
+
+  .home-container {
+    height: 60vh;
+  }
+
+  .my-name {
+    font-size: 1.5rem;
+  }
+
+  .navigation-inner {
+    display: none;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+  .square-background {
+    height: 56vh;
+    width: 22rem;
+  }
+
+  .image-of-shan {
+    height: 350px;
+  }
+
+  .more-info {
+    height: 24vh;
+  }
+  .hailing {
+    border-bottom: none;
+    font-size: 1.5rem;
+    margin-bottom: none;
+  }
+
+  .des,
+  .dev,
+  .striking {
+    font-size: 1.4rem;
+  }
+
+  .dev {
+    font-family: "Anonymous Pro", monospace;
+    overflow: hidden;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    white-space: nowrap;
+    width: 30%;
+    animation: typewriter 6s steps(21) infinite normal both,
+      blinkTextCursor 500ms steps(21) infinite normal;
+    display: inline-flex;
+  }
+
+  @keyframes typewriter {
+    10% {
+      width: 0ch;
+    }
+
+    0% {
+      width: 21ch;
+    }
+  }
+
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: 2px solid rgba(0, 0, 0, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+
+  .footer-container {
+    height: 8vh;
+  }
+
+  .say-hello {
+    font-size: 1.5rem;
+  }
+
+  .fa.fa-github.m-4 {
+    font-size: 2rem;
+  }
+
+  .project-container {
+    flex-direction: column;
+    margin-left: 0;
+    height: 85vh;
+  }
+
+  .one-letter-01,
+  .one-letter-02,
+  .one-letter-03 {
+    font-size: 35rem;
+    height: 55vh;
+  }
+
+  .details-title-01,
+  .details-title-02,
+  .details-title-03,
+  .project-button {
+    font-size: 2rem;
+  }
+
+  .sub-title {
+    font-size: 3rem;
+  }
+
+  .footer-number-01,
+  .footer-number-02,
+  .footer-number-03 {
+    font-size: 10rem;
+  }
+
+  .project-details-container {
+    bottom: 0;
+    left: 0;
+  }
+
+  .project-details-01,
+  .project-details-02,
+  .project-details-03 {
+    width: 95vw;
+    height: 50vh;
+    /* top: 2rem; */
+  }
+
+  .p-description {
+    width: 100%;
+  }
+
+  .contact-container {
+    height: 85vh;
+    flex-direction: column;
+  }
+
+  .contact-header {
+    width: 100%;
+    font-size: 4rem;
+  }
+  .blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: var(--dominant-color);
+    width: 60vmax;
+    z-index: -1;
+    animation: roll 10s ease-in-out infinite;
+    transform-origin: 60% 60%;
+  }
+
+  @keyframes roll {
+    0% {
+      transform: scale(1) translate(10px, -260px);
+    }
+    38% {
+      transform: scale(0.8, 1) translate(0vw, 30vh) rotate(160deg);
+    }
+    40% {
+      transform: scale(0.8, 1) translate(0vw, 30vh) rotate(160deg);
+    }
+    78% {
+      transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
+    }
+    80% {
+      transform: scale(1.3) translate(0vw, 30vh) rotate(-20deg);
+    }
+    100% {
+      transform: scale(1) translate(10px, -260px);
+    }
+  }
+
+  .contact-paragraph {
+    font-size: 2.5rem;
+  }
 }

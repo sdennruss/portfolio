@@ -39,12 +39,7 @@ const Home = () => {
 
         <div className="image-container">
           <div className="square-background"></div>
-          <img
-            className="image-of-shan"
-            src={Shan}
-            style={{ height: 500 }}
-            alt="sdr"
-          />
+          <img className="image-of-shan" src={Shan} alt="sdr" />
         </div>
       </div>
       <div className="more-info">
