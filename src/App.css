@@ -245,7 +245,7 @@ body {
   font-family: "Playfair Display SC";
   font-weight: bold;
   color: var(--secondary-color);
-  font-size: 10rem;
+  font-size: 9rem;
   letter-spacing: 0.8rem;
 }
 
@@ -449,8 +449,8 @@ body {
   position: relative;
   right: 13%;
   bottom: 5%;
-  width: 32rem;
-  height: 56rem;
+  width: 26rem;
+  height: 46rem;
   background-color: var(--dominant-color);
   z-index: -1;
   box-shadow: 0.5rem 0.5rem 0.5rem #000;
@@ -462,8 +462,8 @@ body {
   transition: transform 0.5s ease;
   cursor: pointer;
   box-shadow: 0.3rem 0.3rem 0.3rem #000;
-  z-index: 5;
-  height: 500px;
+  /* z-index: 5; */
+  height: 400px;
 }
 
 .image-of-shan:hover {
@@ -479,15 +479,15 @@ body {
   justify-content: center;
   position: relative;
   height: 10vh;
+  border-bottom: 1px solid black;
 }
 
 .hailing {
   width: 100%;
   font-size: 2.5rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
   margin: 0 2rem 1rem 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid black;
   position: relative;
   text-align: justify;
   font-family: "Playfair Display";
@@ -695,8 +695,9 @@ body {
 .details-title-01,
 .details-title-02,
 .details-title-03 {
-  font-size: 3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
   color: white;
 }
 
@@ -706,7 +707,8 @@ body {
 }
 
 .sub-title {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 6rem;
   color: white;
 }
@@ -714,7 +716,7 @@ body {
 .one-letter-01,
 .one-letter-02,
 .one-letter-03 {
-  font-size: 70rem;
+  font-size: 80rem;
   opacity: 0.6;
   position: absolute;
   display: flex;
@@ -746,8 +748,8 @@ body {
 }
 .project-button {
   cursor: pointer;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: rem;
   color: #fff;
 }
 
@@ -800,6 +802,7 @@ body {
 .exit-x {
   cursor: pointer;
   font-weight: bold;
+  font-family: "Raleway", sans-serif;
   font-size: 2rem;
 }
 
@@ -816,8 +819,10 @@ body {
   justify-content: center;
   align-items: flex-end;
   font-weight: bolder;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
   flex: 2;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .p-top {
   flex: 4;
@@ -834,9 +839,10 @@ body {
 .p-tech-used,
 .descrip,
 .tech {
-  width: 70%;
+  width: 90%;
   font-size: 2rem;
   text-align: center;
+  font-family: "Open Sans";
 }
 
 .tech,
@@ -860,6 +866,7 @@ body {
 .p-number {
   font-size: 8rem;
   position: relative;
+  font-family: "Raleway", sans-serif;
 }
 
 .p-next {
@@ -912,7 +919,7 @@ body {
 
 .contact-header {
   font-size: 10rem;
-  width: 70%;
+  width: 90%;
   font-family: "Playfair Display SC";
   text-align: center;
   color: var(--background-color);
@@ -959,12 +966,13 @@ body {
 }
 
 .contact-paragraph {
-  font-size: 3rem;
+  font-size: 2.5rem;
   position: relative;
   display: flex;
   font-family: "Playfair Display";
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   padding-bottom: 2rem;
+  flex-direction: column;
 }
 
 .ethical {
@@ -1026,7 +1034,6 @@ body {
   flex: 1;
   display: flex;
   position: relative;
-  padding-bottom: 1rem;
 }
 
 .github-div {
@@ -1054,7 +1061,7 @@ body {
 .say-hello {
   font-family: "Playfair Display";
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .fa.fa-github.m-4:hover::before,
 .say-hello:hover {
@@ -1104,6 +1111,7 @@ body {
   .more-info {
     height: 24vh;
   }
+
   .hailing {
     border-bottom: none;
     font-size: 1.5rem;
@@ -1167,8 +1175,9 @@ body {
   .one-letter-01,
   .one-letter-02,
   .one-letter-03 {
-    font-size: 35rem;
-    height: 55vh;
+    font-size: 30rem;
+    height: 60vh;
+    font-family: "Playfair Display SC";
   }
 
   .details-title-01,
@@ -1201,8 +1210,16 @@ body {
     /* top: 2rem; */
   }
 
+  .p-title {
+    display: flex;
+    align-items: center;
+  }
+
   .p-description {
     width: 100%;
+  }
+
+  .p-number {
   }
 
   .contact-container {
@@ -1212,7 +1229,8 @@ body {
 
   .contact-header {
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-family: "Playfair Display SC";
   }
   .blob {
     position: absolute;

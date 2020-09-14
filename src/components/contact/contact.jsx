@@ -18,8 +18,7 @@ const Contact = () => {
             {" "}
             One of my priorities is to focus on working with ethical brands that
             offer a product / service without the harm of animals or humans in
-            the process. Slip me an email and let's talk if you feel we jive! e:
-            sdennisrussell@gmail.com
+            the process. Slip me an email and let's talk if you feel we jive!
           </p>
           <p className="ethical">eth·i·cal</p>
           <p className="pronounciation">/ˈeTHək(ə)l/</p>
