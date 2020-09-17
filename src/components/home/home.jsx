@@ -44,8 +44,9 @@ const Home = () => {
       </div>
       <div className="more-info">
         <p className="hailing">
-          Web Developer hailing from Toronto, Canada, currently hibernating in
-          Asia <p className="dev"> {` < /developing >`}</p> and{" "}
+          Hello! Shanice here. Web Developer hailing from Toronto, Canada,
+          currently hibernating in Asia{" "}
+          <p className="dev"> {` < /developing >`}</p> and{" "}
           <span className="des">designing </span> minimalistic websites to
           transition businesses from the offline world and introduce their
           brands to the <span className="striking"> World Wide Web.</span>

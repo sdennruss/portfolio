@@ -17,9 +17,11 @@ const Contact = () => {
           <p className="contact-paragraph">
             {" "}
             One of my priorities is to focus on working with ethical brands that
-            offer a product / service without the harm of animals or humans in
-            the process. Slip me an email and let's talk if you feel we jive!
+            offer products and/or services without the harm of animals or
+            humans. Have a project you want to get started on? Connect via email
+            and let's talk details.
           </p>
+
           <p className="ethical">eth·i·cal</p>
           <p className="pronounciation">/ˈeTHək(ə)l/</p>
           <li className="definition">

@@ -130,7 +130,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  height: 7vh;
 }
 
 .shanice-logo,
@@ -141,11 +141,6 @@ body {
 
 .shanice-logo {
   left: 2rem;
-}
-
-.my-name {
-  font-family: "El+Messiri";
-  font-size: 3rem;
 }
 
 .not-open {
@@ -383,6 +378,12 @@ body {
   }
 }
 
+.line,
+.line::before,
+.line::after {
+  height: 0.3rem;
+}
+
 .home-container {
   position: relative;
   display: flex;
@@ -478,7 +479,7 @@ body {
   /* width: 100%; */
   justify-content: center;
   position: relative;
-  height: 10vh;
+  height: 8vh;
   border-bottom: 1px solid black;
 }
 
@@ -549,9 +550,10 @@ body {
 .project-container {
   display: flex;
   position: relative;
-  height: 89.5vh;
+  height: 88vh;
   margin-left: 2rem;
   animation: transitionIn ease-in 800ms;
+  overflow: hidden;
   /* z-index: -2; */
 }
 
@@ -680,7 +682,6 @@ body {
 
 .blur {
   filter: blur(5px);
-  cursor: pointer;
 }
 
 .title-container-01,
@@ -749,7 +750,7 @@ body {
 .project-button {
   cursor: pointer;
   font-family: "Raleway", sans-serif;
-  font-size: rem;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -905,9 +906,10 @@ body {
 .contact-container {
   display: flex;
   position: relative;
-  height: 89.5vh;
+  height: 88vh;
   animation: transitionIn ease-in 800ms;
   margin: 0 2rem;
+  overflow: hidden;
 }
 
 .contact-left {
@@ -970,9 +972,25 @@ body {
   position: relative;
   display: flex;
   font-family: "Playfair Display";
-  border-bottom: 1px solid black;
   padding-bottom: 2rem;
   flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.bold-email {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  position: relative;
+  font-weight: bolder;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.bold-email:hover {
+  font-size: 2.1rem;
+  color: var(--dominant-color);
 }
 
 .ethical {
@@ -1085,11 +1103,7 @@ body {
   }
 
   .home-container {
-    height: 60vh;
-  }
-
-  .my-name {
-    font-size: 1.5rem;
+    height: 50vh;
   }
 
   .navigation-inner {
@@ -1100,16 +1114,17 @@ body {
     justify-content: center;
   }
   .square-background {
-    height: 56vh;
-    width: 22rem;
+    height: 42vh;
+    width: 16rem;
   }
 
   .image-of-shan {
-    height: 350px;
+    height: 36vh;
   }
 
   .more-info {
-    height: 24vh;
+    height: 34vh;
+    align-items: center;
   }
 
   .hailing {
@@ -1219,9 +1234,6 @@ body {
     width: 100%;
   }
 
-  .p-number {
-  }
-
   .contact-container {
     height: 85vh;
     flex-direction: column;
@@ -1229,8 +1241,7 @@ body {
 
   .contact-header {
     width: 100%;
-    font-size: 3.5rem;
-    font-family: "Playfair Display SC";
+    font-size: 4rem;
   }
   .blob {
     position: absolute;

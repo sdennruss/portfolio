@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Hamburger from "./hamburger";
+import sdrLogo from "./portfolio-logo.png";
 
 const Header = () => {
   const [expand, setExpand] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
     <React.Fragment>
       <div className="header-container">
         <div className="shanice-logo">
-          <h1 className="my-name">Shanice D.R</h1>
+          <img className="my-name" src={sdrLogo} />
         </div>
         <div className="navigation-container">
           <Hamburger
