@@ -390,7 +390,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
   animation: Up 1500ms ease-out forwards;
 }
 
@@ -480,20 +480,20 @@ body {
   /* width: 100%; */
   justify-content: center;
   position: relative;
-  height: 8vh;
+  height: 18vh;
+  align-items: center;
   border-bottom: 1px solid black;
 }
 
 .hailing {
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 3rem;
-  margin: 0 2rem 1rem 2rem;
   padding-bottom: 1rem;
   position: relative;
   text-align: justify;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .des,
@@ -1132,7 +1132,6 @@ body {
     border-bottom: none;
     font-size: 1.5rem;
     margin-bottom: none;
-    font-family: Georgia, "Times New Roman", Times, serif;
   }
 
   .des,
