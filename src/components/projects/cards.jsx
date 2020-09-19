@@ -18,24 +18,20 @@ function Card({
     <React.Fragment>
       <div className={blur}>
         <div className={`card-image-left`}>
-          <img
-            className={`card-image-${number}`}
-            alt="project-image"
-            src={img}
-          />
+          <img className={`card-image-${number}`} alt="projects" src={img} />
         </div>
 
         <div className="card-image-right">
           <img
             style={{ display: hide }}
             className={`card-image-right-${number}`}
-            alt="project-image"
+            alt="projects"
             src={img2}
           />
           <img
             style={{ display: hide }}
             className={`card-image-right-${number}`}
-            alt="project-image"
+            alt="projects"
             src={img3}
           />
         </div>

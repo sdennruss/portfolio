@@ -5,7 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import "font-awesome/css/font-awesome.css";
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
