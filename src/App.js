@@ -14,10 +14,10 @@ const App = () => {
 
       <div className="routing-container">
         <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route path="home" component={Footer} />
+          <Route path="/Home" component={Home} />
+          <Route path="/Projects" component={Projects} />
+          <Route path="/Contact" component={Contact} />
+          <Route path="Home" component={Footer} />
           <Route paht="/" exact component={Home} />
         </Switch>
       </div>
