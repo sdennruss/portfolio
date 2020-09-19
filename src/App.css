@@ -491,7 +491,7 @@ body {
   padding-bottom: 1rem;
   position: relative;
   text-align: justify;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   text-align: center;
 }
 
@@ -971,7 +971,7 @@ body {
   font-size: 2.5rem;
   position: relative;
   display: flex;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   padding-bottom: 2rem;
   flex-direction: column;
   border-bottom: 1px solid black;
@@ -1077,7 +1077,7 @@ body {
 }
 
 .say-hello {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 2rem;
 }
