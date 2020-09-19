@@ -18,8 +18,13 @@ const Header = () => {
     <React.Fragment>
       <div className="header-container">
         <div className="shanice-logo">
-          <img className="my-name" src={sdrLogo} />
+          <img
+            alt="keyboard-with-initials-logo"
+            className="my-name"
+            src={sdrLogo}
+          />
         </div>
+
         <div className="navigation-container">
           <Hamburger
             close={close}
