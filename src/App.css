@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
@@ -494,6 +494,7 @@ body {
   text-align: justify;
   font-family: "Playfair Display", serif;
   text-align: center;
+  font-style: italic;
 }
 
 .des,
@@ -973,6 +974,7 @@ body {
   position: relative;
   display: flex;
   font-family: "Playfair Display", serif;
+  font-style: italic;
   padding-bottom: 2rem;
   flex-direction: column;
   border-bottom: 1px solid black;
@@ -1080,7 +1082,7 @@ body {
 .say-hello {
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .fa.fa-github.m-4:hover::before,
 .say-hello:hover {
@@ -1101,6 +1103,40 @@ body {
 
   .toggle-links {
     font-size: 8rem;
+  }
+  .span-hover {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .span-hover:after,
+  .span-hover:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+  }
+  .span-hover:before {
+    left: -2.5px;
+  }
+
+  .toggle-links .span-hover:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .toggle-links .span-hover:hover:before {
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .toggle-links .span-hover:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
   }
 
   .home-container {
@@ -1133,6 +1169,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: none;
     font-family: "Playfair Display", serif;
+    font-style: italic;
   }
 
   .des,
@@ -1177,6 +1214,7 @@ body {
 
   .say-hello {
     font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
   }
 
   .fa.fa-github.m-4 {
@@ -1232,8 +1270,40 @@ body {
     align-items: center;
   }
 
-  .p-description {
+  .descrip,
+  .p-description,
+  .p-tech-used,
+  .tech {
     width: 100%;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .p-number {
+    font-family: "Raleway", sans-serif;
+    font-size: 7rem;
+  }
+
+  .card-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .card-image-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .card-image-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .contact-container {
@@ -1278,23 +1348,21 @@ body {
   }
 
   .contact-paragraph {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: "Playfair Display", serif;
+    font-style: italic;
   }
-
   .ethical {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: "Raleway", sans-serif;
   }
-
   .pronounciation {
-    font-size: 1rem;
-    font-family: "Raleway", sans-serif;
     font-style: italic;
   }
 
-  .definition {
-    font-size: 1rem;
+  .definition,
+  .pronounciation {
+    font-size: 1.2rem;
     font-family: "Raleway", sans-serif;
   }
 }
