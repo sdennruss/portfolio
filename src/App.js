@@ -3,7 +3,8 @@ import Projects from "./components/projects/projects";
 import Home from "./components/home/home";
 import { Switch, Route } from "react-router-dom";
 import Contact from "./components/contact/contact";
-import "./App.css";
+import "../public/css/App.css";
+
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 
