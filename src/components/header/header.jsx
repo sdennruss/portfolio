@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import Hamburger from "./hamburger";
 import sdrLogo from "./portfolio-logo.png";
+import { Redirect } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ Red }) => {
   const [expand, setExpand] = useState(false);
   const [close, setClose] = useState("");
+  const [redirect, setRedirect] = useState("");
 
   const handleToggle = (expand, exit) => {
     setExpand(expand);
 
     !expand ? setClose(exit) : setClose("");
+  };
 
-    console.log("expanded:", expand);
+  const handleRedirect = () => {
+    return <Redirect to="/Home/" />;
   };
 
   return (
@@ -19,6 +23,7 @@ const Header = () => {
       <div className="header-container">
         <div className="shanice-logo">
           <img
+            onClick={() => handleRedirect}
             alt="keyboard-with-initials-logo"
             className="my-name"
             src={sdrLogo}

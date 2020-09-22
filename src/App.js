@@ -1,11 +1,11 @@
 import React from "react";
+import "./App.css";
 import Projects from "./components/projects/projects";
 import Home from "./components/home/home";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Contact from "./components/contact/contact";
-import "./App.css";
-import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import Header from "./components/header/header";
 
 const App = () => {
   return (
@@ -17,7 +17,6 @@ const App = () => {
           <Route path="/Home" component={Home} />
           <Route path="/Projects" component={Projects} />
           <Route path="/Contact" component={Contact} />
-          <Route path="Home" component={Footer} />
           <Route paht="/" exact component={Home} />
         </Switch>
       </div>

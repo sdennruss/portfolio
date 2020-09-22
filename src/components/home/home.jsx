@@ -3,20 +3,19 @@ import Shan from "./photoshoot.jpg";
 import Nav from "../header/nav";
 import { ReactComponent as Left } from "./left.svg";
 import { ReactComponent as Right } from "./right.svg";
-// import { ReactComponent as Blob } from "./blob.svg";
 import LandingPage from "./landing";
 
 const Home = () => {
-  const [left, setLeft] = useState(0);
+  const [left, setLeft] = useState(1.5);
 
   const handleLeft = (scroll) => {
-    scroll === -54 ? setLeft(54) : setLeft(scroll);
+    scroll === -52.5 ? setLeft(55.5) : setLeft(scroll);
 
     console.log("left", scroll);
   };
 
   const handleRight = (scroll) => {
-    scroll === 108 ? setLeft(0) : setLeft(scroll);
+    scroll === 109.5 ? setLeft(1.5) : setLeft(scroll);
     console.log("right", scroll);
   };
 
