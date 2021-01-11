@@ -3,12 +3,12 @@ import projects from "./projectscope";
 import Card from "./cards";
 import Details from "./details";
 
-const Projects = (props) => {
+const Projects = () => {
   const [newCard, setNewCard] = useState(0);
   const [expand, setExpand] = useState(false);
 
   const handleCardChange = (card) => {
-    card === 3 ? setNewCard(0) : setNewCard(card);
+    card === 2 ? setNewCard(0) : setNewCard(card);
     console.log("newcard", card);
   };
 
@@ -30,6 +30,7 @@ const Projects = (props) => {
             title={projects[newCard].title}
             description={projects[newCard].description}
             techUsed={projects[newCard].techUsed}
+            link={projects[newCard].link}
             number={projects[newCard].number}
             path={projects[newCard].path}
             img={projects[newCard].img1}

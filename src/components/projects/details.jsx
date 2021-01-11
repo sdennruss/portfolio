@@ -6,6 +6,7 @@ const Details = ({
   description,
   techUsed,
   number,
+  link,
   path,
   img,
   sub,
@@ -40,6 +41,7 @@ const Details = ({
             number={number}
             path={path}
             img={img}
+            link={link}
           />
         </div>
       </div>

@@ -1,13 +1,13 @@
-import Cow1 from "./project-assets/cow1.png";
-import Cow2 from "./project-assets/cow2.png";
-import Cow3 from "./project-assets/cow3.png";
+import VVC1 from "./project-assets/VVC1.png";
+import VVC2 from "./project-assets/VVC2.png";
+import VVC3 from "./project-assets/VVC3.png";
 import PinkScooter from "./project-assets/scooter-mock.png";
 
 export const projects = [
   {
-    img1: Cow1,
-    img2: Cow2,
-    img3: Cow3,
+    img1: VVC1,
+    img2: VVC2,
+    img3: VVC3,
     title: "Vegan Virgan Challenge",
     sub: "Interactive Transition Recipe Guide",
     description:
@@ -15,30 +15,20 @@ export const projects = [
     techUsed: "HTML, CSS, ReactJS",
     path: "project-1",
     number: "01",
+    link: "https://veganvirginchallenge.com",
   },
   {
     img1: PinkScooter,
     img2: " ",
     img3: " ",
-    title: "Scoot Scoot",
-    sub: "Instaworthy Drives",
+    title: "GLH",
+    sub: "Renovations and Construction",
     description:
-      "A scooter company based in Bali, Indonesia offering bike rentals for those looking for a more glamourous way of travelling across the island.",
+      "*website still underconstruction* A bali based renovations and construction portfolio illustrating before and after shots of run-down villas built and designed as rental properties",
     techUsed: "HTML, CSS, ReactJS",
     path: "project-2",
     number: "02",
-  },
-  {
-    img1: Cow1,
-    img2: Cow2,
-    img3: Cow3,
-    title: "Hercules",
-    sub: "Make it Street",
-    description:
-      "A uni-sex brand offering a variety of street wear mixed in with one of a kind pieces handmade in Bali, Indonesia",
-    techUsed: "HTML, CSS, ReactJS, Node",
-    path: "project-3",
-    number: "03",
+    link: "https://shanicedr.com",
   },
 ];
 

@@ -620,20 +620,15 @@ body {
   position: relative;
 }
 
-.card-image-left:hover,
-.card-image-right:hover {
-  transform: translateY(-20px);
-}
-
 .card-image-01,
 .card-image-02,
 .card-image-03 {
-  max-width: 90%;
+  max-width: 80%;
 }
 
 .card-image-right-01,
 .card-image-right-03 {
-  max-width: 80%;
+  max-width: 70%;
 }
 
 .page-number {
@@ -839,7 +834,8 @@ body {
 .p-description,
 .p-tech-used,
 .descrip,
-.tech {
+.tech,
+.p-link {
   width: 90%;
   font-size: 2rem;
   text-align: center;
@@ -849,6 +845,15 @@ body {
 .tech,
 .descrip {
   font-weight: bold;
+}
+
+.p-link {
+  text-decoration: none;
+  color: black;
+}
+
+.p-link:hover {
+  text-decoration: underline;
 }
 
 .p-bottom {
@@ -1278,6 +1283,8 @@ body {
   .tech {
     width: 100%;
     font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    color: black;
   }
 
   .p-number {

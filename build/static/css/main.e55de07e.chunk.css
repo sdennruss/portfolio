@@ -147,7 +147,6 @@ body {
 .my-name {
   cursor: pointer;
 }
-
 .not-open {
   display: none;
 }
@@ -1083,7 +1082,6 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
 }
-
 .fa.fa-github.m-4:hover::before,
 .say-hello:hover {
   color: var(--dominant-color);

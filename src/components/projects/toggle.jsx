@@ -9,6 +9,7 @@ const Toggle = ({
   handleToggle,
   handleCardChange,
   newCard,
+  link,
 }) => {
   return (
     <React.Fragment>
@@ -34,6 +35,17 @@ const Toggle = ({
                 <p className="p-tech-used">
                   <span className="tech">Tech Used: </span>
                   {techUsed}
+                </p>
+                <p className="p-tech-used">
+                  <span className="tech">Link: </span>
+                  <a
+                    href={` ${link}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-link"
+                  >
+                    Visit Website
+                  </a>
                 </p>
               </div>
 

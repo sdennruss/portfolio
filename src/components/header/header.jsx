@@ -3,7 +3,7 @@ import Hamburger from "./hamburger";
 import sdrLogo from "./portfolio-logo.png";
 import { Redirect } from "react-router-dom";
 
-const Header = ({ Red }) => {
+const Header = () => {
   const [expand, setExpand] = useState(false);
   const [close, setClose] = useState("");
   const [redirect, setRedirect] = useState("");

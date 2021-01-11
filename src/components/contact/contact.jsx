@@ -1,5 +1,4 @@
 import React from "react";
-// import { ReactComponent as Girl } from "./contact-girl.svg";
 import { ReactComponent as Blob } from "./blob.svg";
 
 const Contact = () => {
